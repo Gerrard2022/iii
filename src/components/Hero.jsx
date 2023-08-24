@@ -7,18 +7,19 @@ const HomePage = () => {
         backgroundImage: `url(${micro})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '100vh', // Ensure the background covers the whole viewport
+        minHeight: '100vh', 
+        
     };
 
     const contentStyle = {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black background
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
     };
 
     return (
         <div style={containerStyle}>
             <div style={contentStyle} className="min-h-screen flex flex-col justify-center text-white">
                 <header className="bg-transparent shadow-md">
-                    {/* Header content */}
+                    
                 </header>
 
                 <section className="py-[140px] md:py-6">
@@ -49,12 +50,11 @@ const HomePage = () => {
             <section className="bg-transparent py-16">
                 <div className="container mx-auto">
                     <div>
-                        {/* Add your content over the image */}
                     </div>
                 </div>
             </section>
 
-            {/* Add your Services page content here */}
+            
         </div>
     );
 }
@@ -67,64 +67,3 @@ export default HomePage;
 
 
 
-/* 
-
-
- const [text, setText] = useState('');
-  const leftContentText = "Empower your education,\nwith our cutting-edge platform.\nAccess interactive lessons,\nExpert instructors,\nand grow to new heights,\nall with our platform.";
-  const delay = 50; // Adjust this for typing speed
-  
-  useEffect(() => {
-    let currentIndex = 0;
-
-    const interval = setInterval(() => {
-      setText((prevText) => prevText + leftContentText[currentIndex]);
-      currentIndex++;
-
-      if (currentIndex === leftContentText.length) {
-        clearInterval(interval);
-      }
-    }, delay);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
- <div>
-            <section className='relative w-full h-screen mx-auto bg-cover bg-center'>
-        <div className={`${styles.paddingX} top-[70px] w-full absolute inset-0 md:top-[120px] max-w-7xl h-[590px] mx-auto flex flex-row items-start gap-5 bg-primary opacity-60 mb-12 `}>
-          <div className='flex flex-col justify-center items-center mt-5'>
-            <div className='w-5 h-5 rounded-full bg-[#915eff]' />
-            <div className='w-1 sm:h-80 h-40 bg-white'/>
-          </div>
-          <div>
-            <h1 className={`${styles.heroHeadText}`}>Top <span className='text-[#915eff]'>Edu</span></h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100 whitespace-pre-line`}>
-              {text}
-            </p>
-          </div>
-        </div>
-        <div className=''>
-          <div className=' mt-[300px] w-[350px] absolute md:ml-[290px] md:mt-[10px] md:w-[350px] md:h-[500px] md:absolute md:top-[120px] md:right-[25px]
-        lg:ml-[270px] lg:mt-[10px] lg:w-[400px] lg:h-[500px] lg:absolute lg:top-[120px] lg:right-10'>
-          <img src={docx} alt="istock" className='ml-2.5 h-[360px] lg:ml-[-45px] lg:mt-[30px] lg:w-[370px] w-[350px] md:h-[500px] rounded-lg cursor-pointer'/>
-          <div className='mt-[-460px] ml-[8px] lg:ml-[-45px] lg:w-[370px] h-[300px] md:mt-[-499px] md:ml-[8px] md:h-[500px] bg-[#1f3d4738] w-[352px] opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out rounded-md absolute backdrop-blur-sm'>
-            <br />
-            <br />
-            <video
-                 id='hover-video'
-                controls
-                className='rounded-sm ml-[1px] w-[372px] h-[420px] object-cover'
-                poster={rufc} 
-              >
-                <source src={canva} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-          </div>
-        </div>
-          </div>
-      </section>
-        </div>
-
-*/

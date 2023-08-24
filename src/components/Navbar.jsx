@@ -9,6 +9,11 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
 
+  const handleLinkClick = () => {
+    // Reload the page when a link is clicked
+    window.location.reload();
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -31,18 +36,19 @@ const Navbar = () => {
     }`} style={{ transitionDuration: '0.3s' }} >
        <div className="w-full flex justify-between
        items-center max-w-7xl mx-auto">
-         <Link to="#" className="flex items-center gap-2" onClick={() => {
+         <Link to="/" className="flex items-center gap-2" onClick={() => {
           setActive("");
           window.scrollTo(0, 0);
          }}>
-          <img src={logo} alt="logo" className="w-[30px] h-18 object-contain md:w-[100px]" />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>Top &nbsp;<span className=''>Edu</span></p>
+          <img src={logo} alt="logo" className="w-[30px] h-18 md:-mt-4 object-contain md:w-[100px]" />
+          <p className='text-white text-[18px] font-bold cursor-pointer md:-mt- flex'>Top &nbsp;<span className=''>Edu</span></p>
          </Link>
          <ul className='list-none hidden sm:flex flex-row gap-10'>
                {navLinks.map((link) => (
                 <li key={link.id} className={`${active === link.title ? "text-white" : "text-white"}
-                hover:text-white text-[18px] font-medium cursor-pointer`} onClick={() => setActive(link.title)}>
-                   <Link to={`#${link.id}`}>{link.title}</Link>
+                hover:text-white text-[18px] font-medium cursor-pointer`} onClick={() => {setActive(link.title);
+                handleLinkClick();}}>
+                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
                ))}
          </ul>
@@ -55,8 +61,9 @@ const Navbar = () => {
                 <li key={link.id} className={`${active === link.title ? "text-white" : "text-white"}
                 font-poppins font-medium text-[16px] cursor-pointer`} onClick={() => {setToggle(!toggle)
                   setActive(link.title);
+                  handleLinkClick();
                 }}>
-                  <Link to={`#${link.id}`}>{link.title}</Link>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 </li>
                ))}
          </ul>
@@ -68,3 +75,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
