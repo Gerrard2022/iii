@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { Navbar, Hero, Contact, About, StarsCanvas } from "./components";
+import { Navbar, Hero, Contact, About, StarsCanvas, Course, Footer} from "./components";
+
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
         </div>
         <div className="relative z-0">
         <About />
+        <Course />
+        <Footer />
         <StarsCanvas />
         <Routes>
           <Route path="/contact" element={<Contact />} />

@@ -1,8 +1,8 @@
 import React, { useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -36,19 +36,21 @@ const Navbar = () => {
     }`} style={{ transitionDuration: '0.3s' }} >
        <div className="w-full flex justify-between
        items-center max-w-7xl mx-auto">
-         <Link to="/" className="flex items-center gap-2" onClick={() => {
+         <a href='/' className="flex items-center gap-2" onClick={() => {
           setActive("");
           window.scrollTo(0, 0);
          }}>
           <img src={logo} alt="logo" className="w-[30px] h-18 md:-mt-4 object-contain md:w-[100px]" />
           <p className='text-white text-[18px] font-bold cursor-pointer md:-mt- flex'>Top &nbsp;<span className=''>Edu</span></p>
-         </Link>
+         </a>
          <ul className='list-none hidden sm:flex flex-row gap-10'>
                {navLinks.map((link) => (
                 <li key={link.id} className={`${active === link.title ? "text-white" : "text-white"}
                 hover:text-white text-[18px] font-medium cursor-pointer`} onClick={() => {setActive(link.title);
                 handleLinkClick();}}>
-                   <a href={`#${link.id}`}>{link.title}</a>
+                   <Link to={link.id} spy={true} smooth={true} duration={500} offset={-50}>
+                    {link.title}
+                   </Link>
                 </li>
                ))}
          </ul>
@@ -63,7 +65,9 @@ const Navbar = () => {
                   setActive(link.title);
                   handleLinkClick();
                 }}>
-                  <a href={`#${link.id}`}>{link.title}</a>
+                 <Link to={link.id} spy={true} smooth={true} duration={500}>
+                    {link.title}
+                   </Link>
                 </li>
                ))}
          </ul>

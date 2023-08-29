@@ -42,17 +42,12 @@ const HomePage = () => {
                         <div className="lg:w-1/2">
                                 <img src={pic} alt="Image" className="mx-auto lg:mr-10 mt-8 lg:mt-[80px] w-[95%] rounded-xl md:w-[70%] md:h-[400px]" />
                             </div>
+                            
                         </div>
                     </div>
+                    
                 </section>
             </div>
-            
-            <section className="bg-transparent py-16">
-                <div className="container mx-auto">
-                    <div>
-                    </div>
-                </div>
-            </section>
 
             
         </div>
