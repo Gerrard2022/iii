@@ -112,7 +112,6 @@ useEffect(() => {
              </div>
             <div className="flex flex-col mt-[100px] w-full rounded-2xl mb-0 justify-center bg-gray-800 h-[340px] md:h-[300px]">
     <h1 className="text-5xl mt-6 text-center ">Sign up for our Newsletter</h1>
-    <p className="mt-4 text-center text-2xl mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis rerum, facilis .</p>
     <div className="mt-8 flex  justify-center space-x-2 mb-8">
     <motion.form initial={{scale: 0 }}
     whileInView={{scale: 1}}
