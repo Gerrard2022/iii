@@ -31,40 +31,7 @@ const Course = () => {
     const [name, setName] = useState(0);
     const [destination, setDestination] = useState(0);
     const [header, setHeader] = useState(0);
-    const headers = ["Everything Done Yet", "Pure Assistance", "Thankful for the level up"]
-    const reviews = ["Apparently Iam an upcoming Developer but with help of this platform, iam running from Rookie to Expert!",
-     "Most Instructors in schools teach according to their personal terms, but this paltform provides pure assistance to us.",
-      "This is apparently a solution for many, so we hope you continue cattering for us this right way" ]
-    const names = ["Ihimbazwe Placide", "Gasasira Constatin", "Ganza Hodari Tikvah"]
-    const destinations = ["Burera, Rwanda", "Nyamata, Rwanda", "Remera, Rwanda"]
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setHeader((prevIndex) => (prevIndex + 1) % headers.length)
-        }, 4000)
-        return () => clearInterval(interval);
-        }, [])
-
-useEffect(() => {
-const interval = setInterval(() => {
-    setReview((prevIndex) => (prevIndex + 1) % reviews.length)
-}, 4000)
-return () => clearInterval(interval);
-}, [])
-
-useEffect(() => {
-    const interval = setInterval(() => {
-        setName((prevIndex) => (prevIndex + 1) % names.length)
-    }, 4000)
-    return () => clearInterval(interval);
-    }, [])
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setDestination((prevIndex) => (prevIndex + 1) % destinations.length)
-        }, 4000)
-        return () => clearInterval(interval);
-        }, [])
     const container = {
         hidden: {
             opacity: 0,
@@ -101,13 +68,6 @@ useEffect(() => {
              <div className="grid md:grid-cols-2 sm:grid-cols-1 mt-12 gap-0">
               <div className="lg:ml-[180px]">
                 <img src={grad} alt="" className="md:w-[350px] md:h-[450px] w-[95%] rounded-2xl" style={{ padding: "20px", border: "1px solid white" }} />
-              </div>
-              <div className="mt-12 md:ml-[20px]">
-                <h1 style={{ fontFamily: "Mukta, sans-serif", fontWeight: "500", fontSize: "24px", marginBottom: "15px"}}>{headers[header]}</h1>
-                <p className="text-2xl text-gray-300 lg:max-w-[400px] mb-8">{reviews[review]}</p>
-                <p className="text-3xl text-white text-center mb-4">{names[name]}</p>
-                <p className="text-2xl text-gray-300 text-center">{destinations[destination]}</p>
-                
               </div>
              </div>
             <div className="flex flex-col mt-[100px] w-full rounded-2xl mb-0 justify-center bg-gray-800 h-[340px] md:h-[300px]">

@@ -20,9 +20,6 @@ import { motion } from 'framer-motion';
                 </div>
                 <div className='flex flex-col gap-4'>
                 <a href="" className='text-sm hover:underline'>{" "}Written Collection</a>
-                <a href="" className='text-sm hover:underline'>{" "}Visual Vault</a>
-                <a href="" className='text-sm hover:underline'>{" "}Teachers Section</a>
-                <a href="" className='text-sm hover:underline'>{" "}Overall Management</a>
                 </div>
             </div>
             <div>
@@ -40,10 +37,10 @@ import { motion } from 'framer-motion';
                 <div className='font-bold mb-6'>Follow us</div>
             
             <div className='text-sm mb-4'>
-             top.edu@gmail.com
+             ibashsookosha2024@gmail.com
             </div>
             <div className='text-sm'>
-              +250790075138
+              +250729980189
             </div>
             <div className='flex gap-4 mt-4'>
              <a href="" className='hover:scale-110 text-xl'><FaYoutube /></a>

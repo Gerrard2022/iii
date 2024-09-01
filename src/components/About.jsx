@@ -70,46 +70,7 @@ const slideInRightVariants = {
                 </motion.div>
 
             </motion.div>
-            <motion.div className="bg-gray-800 py-8 md:w-[100%] lg:w-[98%] rounded-md lg:ml-[25px] md:ml-[10px] mt-3 md:flex md:flex-wrap md:items-center md:justify-center"
-            variants={slideInRightVariants}
-            initial="hidden"
-            whileInView="visible">
-                {/* Content for the dim background section */}
-                <motion.div className="w-full md:w-1/3 p-4" variants={fadeIn}
-                    initial="hidden"
-                    whileInView="visible" >
-                <h1 className='text-xl font-semibold mb-2 text-white text-left'>Visual Vault</h1>
-                    <p className="text-lg text-white">  Discover engaging video lessons that cover a wide array of subjects. Our 
-                    carefully selected videos provide you with a dynamic learning experience that caters to various learning 
-                    styles. Whether you're looking to understand complex concepts or explore new interests, our educational videos offer
-                     insights and knowledge to fuel your intellectual curiosity.</p>
-                     <button className="bg-blue-500 text-white px-4 py-2 rounded-full mt-4 hover:bg-blue-600 transition duration-300 ease-in-out">
-                        Learn More
-                    </button>
-                </motion.div>
-                <motion.div className="w-full md:w-[37%] lg:ml-[100px] md:ml-[50px] p-4" variants={fadeInVariants}
-                    initial="hidden"
-                    whileInView="visible">
-                     <video
-            src={canva}
-            className="w-full h-[400px] object-fill rounded-lg"
-            controls={false}
-            autoPlay
-            loop
-            muted={isMuted}
-            onMouseEnter={() => setIsVideoHovered(true)}
-            onMouseLeave={() => setIsVideoHovered(false)}
-          ></video>
-          <button
-            onClick={handleMuteToggle}
-            className={`bg-black text-white px-2 py-1 rounded-full absolute mt-[-30px] ml-[65%] md:ml-[26%] ${
-                isVideoHovered ? "visible" : "invisible"
-              } transition-opacity duration-500`}
-          >
-            {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-          </button>
-                </motion.div>
-            </motion.div>
+
           
         </div>
     );

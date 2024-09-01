@@ -29,14 +29,14 @@ const HomePage = () => {
                             <h1 className="text-3xl md:text-5xl font-semibold mb-4 text-left"> Explore | Learn | Grow</h1>
                             <h2 className="text-2xl md:text-4xl font-semibold mb-4 text-left"> Anytime | Anywhere</h2>
                             <p className="text-lg md:text-2xl mb-6 text-left">
-                                Explore a world of knowledge with our interactive and engaging courses.
-                                Embark on a journey of self-discovery with our captivating courses.
+                                Explore a world of knowledge with our interactive and engaging books.
+                                Embark on a journey of self-discovery with our captivating books and thesis.
                             </p>
                             <Link
                                 to=""
                                 className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 py-2 px-6 rounded-full text-lg font-semibold transition duration-300"
                             >
-                                Browse Courses
+                                Browse books
                             </Link>
                         </div>
                         <div className="lg:w-1/2">
